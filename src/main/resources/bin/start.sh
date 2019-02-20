@@ -82,8 +82,8 @@ then
 	done
 	
 	echo ${APP_NAME} Starting ...
-	# $JAVA $JAVA_OPTS -DAPP_NAME=${APP_NAME} -Dbase.path=${BASE_PATH} -classpath .:$CLASSPATH -cp $app:"${BASE_PATH}"/*.jar com.devzy.share.zkui.Main --spring.config.location=$CONF >$LOG 2>&1 &
-	$JAVA $JAVA_OPTS -DAPP_NAME=${APP_NAME} -Dbase.path=${BASE_PATH} -jar $app --spring.config.location=$CONF >$LOG 2>&1 &
+	# $JAVA $JAVA_OPTS -Dapp.name=${APP_NAME} -Dbase.path=${BASE_PATH} -classpath .:$CLASSPATH -cp $app:"${BASE_PATH}"/*.jar com.devzy.share.zkui.Main --spring.config.location=$CONF >$LOG 2>&1 &
+	$JAVA $JAVA_OPTS -Dapp.name=${APP_NAME} -Dbase.path=${BASE_PATH} -jar $app --spring.config.location=$CONF >$LOG 2>&1 &
 	echo $! > $PID
 	echo ${APP_NAME} Finish ...
 	DEV_LOOPS=0;
