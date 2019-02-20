@@ -7,7 +7,7 @@
 		<format>tar.gz</format>
 	</formats>
 	<includeBaseDirectory>true</includeBaseDirectory>
-	<baseDirectory>${project.basedir}/${project.artifactId}</baseDirectory>
+	<baseDirectory>${project.basedir}/${project.name}</baseDirectory>
 	<fileSets>
 		<fileSet>
 			<directory>${project.build.directory}/classes</directory>
